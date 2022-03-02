@@ -46,7 +46,7 @@ jobs:
           
       - name: Build
         run: |
-          ./build_coverage.x
+          ./build_coverage.sh
         
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
@@ -79,7 +79,7 @@ jobs:
           
       - name: Build
         run: |
-          ./build.x
+          ./build.sh
           
       - name: Run examples
         run: |
