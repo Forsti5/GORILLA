@@ -7,3 +7,28 @@ add_pfunit_ctest (test_binsrc
   TEST_SOURCES test_binsrc.f90
   LINK_LIBRARIES GORILLA
   )
+  
+add_pfunit_ctest (test_chamb_m
+  TEST_SOURCES test_chamb_m.f90
+  LINK_LIBRARIES GORILLA
+  )
+  
+add_pfunit_ctest (test_tetra_grid_settings_mod
+  TEST_SOURCES test_tetra_grid_settings_mod.f90
+  LINK_LIBRARIES GORILLA
+  )
+  
+add_pfunit_ctest (test_scaling_r_theta
+  TEST_SOURCES test_scaling_r_theta.f90
+  LINK_LIBRARIES GORILLA
+  )
+  
+add_pfunit_ctest (test_supporting_functions_mod
+  TEST_SOURCES test_supporting_functions_mod.f90
+  LINK_LIBRARIES GORILLA lapack netcdf netcdff
+  )
+  
+add_pfunit_ctest (test_gorilla_settings_mod
+  TEST_SOURCES test_gorilla_settings_mod.f90
+  LINK_LIBRARIES GORILLA
+  )

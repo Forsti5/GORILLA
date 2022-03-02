@@ -16,13 +16,13 @@ contains
       call dmatinv3(A, B, ierr)
       
       resL = all(abs(A-B) <= 1e-13)
-      @assertTrue(resL, message = "test various_functions_mod")
+      @assertTrue(resL, message = "test various_functions_mod with identity matrix")
       
       C = reshape( (/0., 1., 1., 1., 0., 1., 1., 1., 0./), (/3, 3/) )
       call dmatinv3(C, D, ierr)
       
       resL = all(abs(D-1./2.*reshape( (/-1., 1., 1., 1., -1., 1., 1., 1., -1./), (/3, 3/) )) <=1e-13)
-      @assertTrue(resL, message = "test various_functions_mod")
+      @assertTrue(resL, message = "test various_functions_mod with a symmetric matrix")
 
    end subroutine test_dmatinv3
    
