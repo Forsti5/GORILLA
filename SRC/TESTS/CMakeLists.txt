@@ -32,3 +32,8 @@ add_pfunit_ctest (test_gorilla_settings_mod
   TEST_SOURCES test_gorilla_settings_mod.f90
   LINK_LIBRARIES GORILLA
   )
+  
+add_pfunit_ctest (test_pusher_tetra_rk
+  TEST_SOURCES test_pusher_tetra_rk.f90
+  LINK_LIBRARIES GORILLA lapack netcdf netcdff
+  )
