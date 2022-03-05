@@ -1,6 +1,6 @@
-add_library(GORILLA
-  SetWorkingPrecision.f90
-  contrib/Polynomial234RootSolvers.f90 
+add_library(GORILLA STATIC
+	SetWorkingPrecision.f90
+	contrib/Polynomial234RootSolvers.f90 
 	constants_mod.f90 
 	tetra_grid_settings_mod.f90
 	gorilla_settings_mod.f90
@@ -40,7 +40,7 @@ add_library(GORILLA
 	get_canonical_coordinates.f90 
 	orbit_timestep_gorilla.f90 
 	gorilla_plot_mod.f90
-  )
+	)
 
 if ($ENV{GORILLA_COVERAGE} STREQUAL "TRUE")
 	target_compile_options(GORILLA
