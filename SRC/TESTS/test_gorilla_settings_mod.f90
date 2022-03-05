@@ -15,7 +15,6 @@ contains
 		
 		double precision :: compare_eps_from_file
 		double precision :: eps_Phi_in
-		
 		compare_eps_from_file = 0.
 		
 		@assertEqual(eps_Phi, compare_eps_from_file, tolerance = 1e-13, message = "Check if read data in OK")
