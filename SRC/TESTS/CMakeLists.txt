@@ -37,3 +37,5 @@ add_pfunit_ctest (test_pusher_tetra_rk
   TEST_SOURCES test_pusher_tetra_rk.f90
   LINK_LIBRARIES GORILLA lapack netcdf netcdff
   )
+  
+file(COPY tetra_grid.inp gorilla.inp DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
