@@ -14,7 +14,7 @@ contains
    subroutine test_load_tetra_grid_inp_values()
    	
    	double precision :: sfc_s_min_compare
-   	sfc_s_min_compare = 0.1
+   	sfc_s_min_compare = 0.1d0
    	
    	@assertTrue(boole_n_field_periods)
    	@assertFalse(boole_write_mesh_obj)
@@ -27,8 +27,7 @@ contains
    	@assertEqual(n3, 40)
    	@assertEqual(n_field_periods_manual, 1)
    	@assertEqual(netcdf_filename, 'MHD_EQUILIBRIA/netcdf_file_for_test.nc')
-   	! Discuss with Michael
-   	@assertEqual(sfc_s_min, sfc_s_min_compare, tolerance=1e-8) 
+   	@assertEqual(sfc_s_min, sfc_s_min_compare, tolerance=1e-13) 
    	@assertTrue(theta0_at_xpoint)
    	@assertEqual(theta_geom_flux,1)
    	

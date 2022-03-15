@@ -12,7 +12,7 @@ cd BUILD
 cmake .. -DCMAKE_PREFIX_PATH=$PFUNIT_DIR
 make -j
 
-ctest --verbose
+ctest --output-on-failure
 cd SRC/CMakeFiles/GORILLA.dir/
 
 gcov-9 *.gcno

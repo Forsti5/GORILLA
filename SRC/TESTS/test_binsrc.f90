@@ -11,7 +11,7 @@ contains
       double precision :: xi = 5.
       integer :: i
 
-      p = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5]
+      p = [1.5d0, 2.5d0, 3.5d0, 4.5d0, 5.5d0, 6.5d0, 7.5d0, 8.5d0, 9.5d0, 10.5d0]
       call binsrc(p, 1, 10, xi, i)
       
       @assertEqual(5, i, message = "test binsrc")

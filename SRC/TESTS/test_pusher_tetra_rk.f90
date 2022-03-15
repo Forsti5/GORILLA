@@ -10,8 +10,8 @@ contains
 	subroutine test_initialize_const_motion_rk()
 	
 		double precision  :: perpinv_in,perpinv2_in
-		perpinv_in = 3.0
-		perpinv2_in = 2.5
+		perpinv_in = 3.0d0
+		perpinv2_in = 2.5d0
 		
 		call initialize_const_motion_rk(perpinv_in, perpinv2_in)
 		

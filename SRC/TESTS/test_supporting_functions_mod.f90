@@ -38,23 +38,23 @@ contains
 		double precision,dimension(3) :: eigvals
 		double precision,dimension(3) :: eigvector1, eigvector2, eigvector3
 				
-		A = reshape( (/3., 2., -2., -1., 0., 2., 0., 0., -1./), (/N, N/) )
+		A = reshape((/3.d0, 2.d0, -2.d0, -1.d0, 0.d0, 2.d0, 0.d0, 0.d0, -1.d0/), (/N, N/))
 		
 		call calc_eigval(N,A,WR,VR)
 	  	
-	  	eigvals = [-1.,1.,2.]
+	  	eigvals = [-1.d0,1.d0,2.d0]
 	  	@assertEqual(WR, eigvals, tolerance=1e-13, message="Test calc_eigval, compare eigenvalues")
 	  	
-	  	eigvector1 = [0.,0.,1.]
-	  	eigvector2 = [-1.,-2.,-1.] / SQRT(6.)
-	  	eigvector3 = [-1.,-1.,0.] / SQRT(2.)	  	
+	  	eigvector1 = [0.d0,0.d0,1.d0]
+	  	eigvector2 = [-1.d0,-2.d0,-1.d0] / SQRT(6.d0)
+	  	eigvector3 = [-1.d0,-1.d0,0.d0] / SQRT(2.d0)	  	
 	  	
-	  	@assertEqual(VR(:,1), eigvector1, tolerance=1e-6, message="Test calc_eigval, compare first eigenvector") 
-	  	@assertEqual(VR(:,2), eigvector2, tolerance=1e-6, message="Test calc_eigval, compare second eigenvector")
-	  	@assertEqual(VR(:,3), eigvector3, tolerance=1e-6, message="Test calc_eigval, compare third eigenvector")
+	  	@assertEqual(VR(:,1), eigvector1, tolerance=1e-13, message="Test calc_eigval, compare first eigenvector") 
+	  	@assertEqual(VR(:,2), eigvector2, tolerance=1e-13, message="Test calc_eigval, compare second eigenvector")
+	  	@assertEqual(VR(:,3), eigvector3, tolerance=1e-13, message="Test calc_eigval, compare third eigenvector")
 	  	
 	  	!A needs to get declared again, because it gets overwritten in the calc_eigval subroutine
-	  	A = reshape( (/3., 2., -2., -1., 0., 2., 0., 0., -1./), (/N, N/) )
+	  	A = reshape((/3.d0, 2.d0, -2.d0, -1.d0, 0.d0, 2.d0, 0.d0, 0.d0, -1.d0/), (/N, N/))
 	  	
 	  	@assertEqual(matmul(A, VR(:,1)), VR(:,1)*WR(1), tolerance=1e-13, message="Test calc_eigval, use eigenvalue equation")
 	  	@assertEqual(matmul(A, VR(:,2)), VR(:,2)*WR(2), tolerance=1e-13, message="Test calc_eigval, use eigenvalue equation")

@@ -22,7 +22,7 @@
            ierr = 1
            B = 0.d0
            print *,"Error in dmatinv3: Matrix is singular - Inverse matrix doesn't exist."
-           return
+           stop
          endif
 !
          detinv = 1/detinv

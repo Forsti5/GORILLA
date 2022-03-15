@@ -11,7 +11,7 @@ contains
       double precision :: phi
       double precision, dimension(2) :: y
 
-      y = [0,1]
+      y = [0.d0,1.d0]
       call chamb_can(y, phi,ierr)
       @assertEqual(ierr, 0, message = "test chamb_m 1")
 
@@ -24,7 +24,7 @@ contains
       double precision :: phi
       double precision, dimension(2) :: y
       
-      y = [1,1]
+      y = [1.d0,1.d0]
       call chamb_can(y, phi,ierr)
       @assertEqual(ierr, 1, message = "test chamb_m 2")
       
@@ -37,7 +37,7 @@ contains
       double precision :: phi
       double precision, dimension(2) :: y
       
-      y = [2,1]
+      y = [2.d0,1.d0]
       call chamb_can(y, phi,ierr)
       @assertEqual(ierr, 1, message = "test chamb_m 3")
       
