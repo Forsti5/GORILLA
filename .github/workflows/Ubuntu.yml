@@ -30,7 +30,7 @@ jobs:
         run: |
           git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit
           cd pFUnit
-          git reset --soft 00fb758d1dd0d4ac154bc84bc9e33d65bc2a6e23
+          git reset --hard 00fb758d1dd0d4ac154bc84bc9e33d65bc2a6e23
           mkdir -p build
           cd build
           cmake ..
