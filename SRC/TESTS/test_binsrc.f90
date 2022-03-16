@@ -18,5 +18,4 @@ contains
 
    end subroutine test_binsrc_1
    
-   
 end module test_binsrc
